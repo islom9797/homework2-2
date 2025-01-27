@@ -6,6 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class Homework22ApplicationTests {
 
+	int a;
 	@Test
 	void contextLoads() {
 	}
