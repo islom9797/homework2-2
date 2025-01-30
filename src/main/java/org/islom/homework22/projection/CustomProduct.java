@@ -1,16 +1,22 @@
 package org.islom.homework22.projection;
-import org.islom.homework22.entity.User;
+
+import org.islom.homework22.entity.Attachment;
+import org.islom.homework22.entity.Category;
+import org.islom.homework22.entity.Measurement;
+import org.islom.homework22.entity.Product;
 import org.springframework.data.rest.core.config.Projection;
 
-@Projection(types = User.class)
+@Projection(types = Product.class)
 public interface CustomProduct {
     Integer getId();
-    String getFirstName();
-    String getLastName();
-    String getCode();
-    String getPhoneNumber();
-    String getPassword();
 
+    Category getCategory();
+
+    Attachment getAttachment();
+
+    String getCode();
+
+    Measurement getMeasurement();
 
 
 }

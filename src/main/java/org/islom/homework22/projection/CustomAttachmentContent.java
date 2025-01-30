@@ -1,16 +1,16 @@
 package org.islom.homework22.projection;
-import org.islom.homework22.entity.User;
+
+import org.islom.homework22.entity.Attachment;
+import org.islom.homework22.entity.AttachmentContent;
 import org.springframework.data.rest.core.config.Projection;
 
-@Projection(types = User.class)
+@Projection(types = AttachmentContent.class)
 public interface CustomAttachmentContent {
     Integer getId();
-    String getFirstName();
-    String getLastName();
-    String getCode();
-    String getPhoneNumber();
-    String getPassword();
 
+    byte[] getBytes();
+
+    Attachment getAttachment();
 
 
 }

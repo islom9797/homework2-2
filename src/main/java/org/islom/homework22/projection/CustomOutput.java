@@ -1,16 +1,23 @@
 package org.islom.homework22.projection;
-import org.islom.homework22.entity.User;
+import org.islom.homework22.entity.*;
 import org.springframework.data.rest.core.config.Projection;
 
-@Projection(types = User.class)
+import java.security.Timestamp;
+
+@Projection(types = Output.class)
 public interface CustomOutput {
     Integer getId();
-    String getFirstName();
-    String getLastName();
-    String getCode();
-    String getPhoneNumber();
-    String getPassword();
+    Timestamp getDate();
 
+    WareHouse getWareHouse();
+
+    Client getClient();
+
+    Currency getCurrency();
+
+    String getFactureNumber();
+
+    String getCode();
 
 
 }
